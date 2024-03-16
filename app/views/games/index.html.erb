@@ -1,0 +1,11 @@
+<input type="number" id="numberInput" placeholder="Guess a number...">
+<button onclick="makeGuess()">Guess</button>
+<div id="messages"></div>
+
+<script>
+  function makeGuess() {
+    const number = document.querySelector("#numberInput").value;
+    window.app.action.send({ message: `Guess: ${number}` });
+  }
+</script>
+
